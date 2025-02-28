@@ -1,0 +1,28 @@
+[
+    {   "name": "Javascript",  "value ": 21 
+    },
+    {
+        "name": "Python", "value": 22
+    },
+    {
+        "name": "Typescript", "value": 25
+    },
+    {
+        "name": "Java", "value": 33
+    },
+    {
+        "name": "PHP", "value": 21
+    },
+    {
+        "name": "C", "value": 34
+    },
+    {
+        "name": "C++", "value": 21
+    }, 
+    {
+        "name": "HTML/CSS", "value": 4
+    },
+    {
+        "name": "SQL", "value": 5
+    }
+]
