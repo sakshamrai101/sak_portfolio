@@ -6,18 +6,21 @@ import { Radar,
          PolarAngleAxis, 
          PolarRadiusAxis, } from 'recharts';
 
-import languages from "@/data/languages.json";
+interface RadarProps {
+    item: {
+        name: string
+        years: number
+    }
+}
 
-export const RChart = () => {
-
-
+export const RChart = ({item}: RadarProps) => {
     return (
         <RadarChart height={500} width={500}
-        outerRadius="80%" data={languages}>
+        outerRadius="80%" data={[item]}>
             <PolarGrid />
-            <PolarAngleAxis dataKey="name" />
+            <PolarAngleAxis dataKey={item.name} />
             <PolarRadiusAxis />
-            <Radar dataKey="value" stroke='green' fill='green' fillOpacity={0.5} />
+            <Radar dataKey={item.years} stroke='black' fill='black' fillOpacity={1} />
         </RadarChart>
     );
 }

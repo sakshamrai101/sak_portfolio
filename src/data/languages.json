@@ -1,28 +1,28 @@
 [
-    {   "name": "Javascript",  "value ": 21 
+    {   "name": "Javascript",  "years": 3 
     },
     {
-        "name": "Python", "value": 22
+        "name": "Python", "years": 3
     },
     {
-        "name": "Typescript", "value": 25
+        "name": "Typescript", "years": 2
     },
     {
-        "name": "Java", "value": 33
+        "name": "Java", "years": 2
     },
     {
-        "name": "PHP", "value": 21
+        "name": "PHP", "years": 1
     },
     {
-        "name": "C", "value": 34
+        "name": "C", "years": 2
     },
     {
-        "name": "C++", "value": 21
+        "name": "C++", "years": 1
     }, 
     {
-        "name": "HTML/CSS", "value": 4
+        "name": "HTML/CSS", "years": 3
     },
     {
-        "name": "SQL", "value": 5
+        "name": "SQL", "years": 2
     }
 ]
