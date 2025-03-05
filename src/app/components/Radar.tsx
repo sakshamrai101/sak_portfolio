@@ -5,22 +5,27 @@ import { Radar,
          PolarGrid, 
          PolarAngleAxis, 
          PolarRadiusAxis, } from 'recharts';
+import frameworks from "../../data/frameWorks.json";
+import languages from "../../data/languages.json";
+import devTools from "../../data/devTools.json";
 
 interface RadarProps {
-    item: {
-        name: string
-        years: number
-    }
+    currentState: string
 }
 
-export const RChart = ({item}: RadarProps) => {
+export const RChart = ({currentState}: RadarProps) => {
+
+    const skillToRender = currentState === "language" ? languages:
+                          currentState === "devTools" ? devTools:
+                          currentState === "frameWorks" ? frameworks:
+                          languages;
     return (
         <RadarChart height={500} width={500}
-        outerRadius="80%" data={[item]}>
+        outerRadius="80%" data={skillToRender}>
             <PolarGrid />
-            <PolarAngleAxis dataKey={item.name} />
+            <PolarAngleAxis dataKey="name" />
             <PolarRadiusAxis />
-            <Radar dataKey={item.years} stroke='black' fill='black' fillOpacity={1} />
+            <Radar dataKey="years" stroke='red' fill='green' fillOpacity={0.25} />
         </RadarChart>
     );
 }

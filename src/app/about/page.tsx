@@ -1,36 +1,27 @@
 "use client";
 import dynamic from "next/dynamic";
 import "../global.css"
-import devTools from "../../data/devTools.json";
-import languages from "../../data/languages.json";
-import frameWorks from "../../data/frameWorks.json";
 import { useState } from "react";
 
 
-interface Skills {
-    name: string;
-    years: number;
-}
-
-type skillArray = Skills[];
 
 const RChart = dynamic(() => import("../components/Radar").then((mod) => mod.RChart), { ssr: false });
 
 
 export default function About ({}) {
-    const [selectState, setSelectedState] = useState<skillArray>(languages);
+    const [selectState, setSelectedState] = useState("languages");
 
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const current_state = event.target.value;
 
         if (current_state === "languages") {
-            setSelectedState(languages);
+            setSelectedState("languages");
         }
         else if (current_state === "devTools") {
-            setSelectedState(devTools);
+            setSelectedState("devTools");
         }
         else if (current_state === "frameWorks") {
-            setSelectedState(frameWorks);
+            setSelectedState("frameWorks");
         }
     };
     return (
@@ -44,14 +35,12 @@ export default function About ({}) {
             <select onChange={handleSelectChange} className="text-green-400 bg-amber-700">
                 <option value="languages" className="text-purple-500 bg-amber-300">Languages</option>
                 <option value="devTools" className="text-purple-500bg-amber-300">Databases, Frameworks and Technologies</option>
-                <option value="frameworks" className="text-purple-300bg-amber-300">Development Tools</option>
+                <option value="frameWorks" className="text-purple-300bg-amber-300">Development Tools</option>
             </select>
         </div>
 
         <div className="bg-amber-400">
-            {selectState.map((item, index) => (
-                <RChart key={index} item={item} />
-            ))}
+            <RChart currentState={selectState}/>
         </div>
         </div>
     );
