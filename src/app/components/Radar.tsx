@@ -20,12 +20,23 @@ export const RChart = ({currentState}: RadarProps) => {
                           currentState === "frameWorks" ? frameworks:
                           languages;
     return (
-        <RadarChart height={500} width={500}
-        outerRadius="80%" data={skillToRender}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="name" />
-            <PolarRadiusAxis />
-            <Radar dataKey="years" stroke='red' fill='green' fillOpacity={0.25} />
+        <RadarChart 
+            height={500} width={500}
+            outerRadius="70%"
+            data={skillToRender}
+            className='drop-shadow-lg'>
+
+
+            <PolarGrid stroke="black" strokeOpacity={0.3}/>
+
+
+            <PolarAngleAxis dataKey="name" tick={{fill: "white", fontSize: 14, fontWeight: "bold"}} tickCount={5}/>
+
+
+            <PolarRadiusAxis axisLine={false} tick={{ fill: "white", fontSize: 12 }} tickCount={5} />
+
+
+            <Radar dataKey="years" stroke="green" fill="green" fillOpacity={0.3} strokeWidth={2}/>
         </RadarChart>
     );
 }
