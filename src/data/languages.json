@@ -11,18 +11,18 @@
         "name": "Java", "years": 2
     },
     {
-        "name": "PHP", "years": 1
+        "name": "C", "years": 1
     },
     {
-        "name": "C", "years": 2
+        "name": "php", "years": 2
     },
     {
         "name": "C++", "years": 1
     }, 
     {
-        "name": "HTML/CSS", "years": 3
+        "name": "Html/Css", "years": 3
     },
     {
-        "name": "SQL", "years": 2
+        "name": "Sql", "years": 2
     }
 ]

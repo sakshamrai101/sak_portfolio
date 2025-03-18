@@ -42,11 +42,11 @@ export default function About ({}) {
                 {/* Left Section */}
                 <div className="flex flex-col text-left max-w-lg">
                     <p className="text-6xl m-6 group relative w-max">
-                        <span className="px-1 relative z-10 group-hover:text-white">About Me</span>
+                        <span className="px-1 relative z-10 group-hover:text-white" style={{ fontFamily: '"Borel", cursive' }}>About Me</span>
                         <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
                     </p>
-                    <p className="text-3xl text-white">
-                        I am a highly motivated software engineer with an <span className="px-1 z-10 group-hover:text-white text-amber-300">entrepreneurial spirit.</span> It enables me to take full ownership of every product I work on—from ideation to execution.
+                    <p className="text-3xl text-white" style={{fontFamily: '"Borel", cursive'}}>
+                        I am a highly motivated software engineer with an <span className="px-1 z-10 group-hover:text-white text-amber-300">entrepreneurial spirit.</span> It enables me to own of every product I work on—from ideation to execution.
                     </p>
                 </div>
             </div>
@@ -58,8 +58,8 @@ export default function About ({}) {
 
                     {/* Drop down Button */}
                     <button onClick={() => setDropDown(!dropDown)}
-                     id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" className="text-white bg-blue-600 hover:bg-blue-700 border border-blue-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                        Skills (YOE)
+                        id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" className="text-white bg-blue-600 hover:bg-blue-700 border border-blue-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" style={{ fontFamily: '"Borel", cursive' }}>
+                        Skills(YOE)
                         <svg className="w-2.5 h-2.5 ml-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                         </svg>
@@ -74,21 +74,21 @@ export default function About ({}) {
                                     onClick={() => handleSkillChange("languages")}>
                                     <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <img className="w-6 h-6 mr-2 rounded-full" src={codeImage.src} alt="Code image"/>
-                                            <span>Languages</span>
+                                        <span style={{ fontFamily: '"Borel", cursive' }}>Languages</span>
                                     </a>
                                 </li>
                                 <li
                                     onClick={() => handleSkillChange("frameWorks")}>
                                     <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <img className="w-6 h-6 mr-2 rounded-full" src={database.src} alt="Database image"/>
-                                            <span>Databases, Frameworks and Technologies </span>
+                                        <span style={{ fontFamily: '"Borel", cursive' }}>Databases, Frameworks and Technologies </span>
                                     </a>
                                 </li>
                                 <li
                                     onClick={() => handleSkillChange("devTools")}>
                                     <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <img className="w-6 h-6 mr-2 rounded-full" src={devTools.src} alt="Git image"/>
-                                            <span>Development Tools</span> 
+                                        <span style={{ fontFamily: '"Borel", cursive' }}>Development Tools</span> 
                                     </a>
                                 </li>
                             </ul>

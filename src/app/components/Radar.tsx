@@ -27,16 +27,16 @@ export const RChart = ({currentState}: RadarProps) => {
             className='drop-shadow-lg'>
 
 
-            <PolarGrid stroke="black" strokeOpacity={0.3}/>
+            <PolarGrid stroke="white" strokeOpacity={1.5} strokeWidth={2.5}/>
 
 
-            <PolarAngleAxis dataKey="name" tick={{fill: "white", fontSize: 14, fontWeight: "bold"}} tickCount={5}/>
+            <PolarAngleAxis dataKey="name" tick={{ fill: "white", fontSize: 14, fontWeight: "bold", fontFamily: '"Borel", cursive'}} tickCount={5}/>
 
 
-            <PolarRadiusAxis axisLine={false} tick={{ fill: "white", fontSize: 12 }} tickCount={5} />
+            <PolarRadiusAxis axisLine={false} tick={{ fill: "white", fontSize: 12, fontFamily: '"Borel", cursive'}} tickCount={5} />
 
 
-            <Radar dataKey="years" stroke="green" fill="green" fillOpacity={0.3} strokeWidth={2}/>
+            <Radar dataKey="years" stroke="green" fill="green" fillOpacity={0.3} strokeWidth={2.5} />
         </RadarChart>
     );
 }
