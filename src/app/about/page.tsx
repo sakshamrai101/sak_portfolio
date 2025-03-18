@@ -5,6 +5,7 @@ import { useState } from "react";
 import codeImage from "../../assets/code.png";
 import devTools from "../../assets/devTools.png";
 import database from "../../assets/database.png";
+import { Navbar } from "../components/Navbar";
 
 
 const RChart = dynamic(() => import("../components/Radar").then((mod) => mod.RChart), { ssr: false });
@@ -37,6 +38,7 @@ export default function About ({}) {
     };
     return (
         <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-cyan-500 to-blue-500">
+            <Navbar />
             <div className="w-full max-w-6xl flex justify-center items-center">
 
                 {/* Left Section */}
@@ -69,7 +71,7 @@ export default function About ({}) {
                     {/* Drop down Menu */}
 
                     {dropDown && (
-                            <ul className="m-1 h-35 py-2 overflow-y-auto text-gray-700 dark:text-gray-200 bg-blue-500 rounded-xl shadow-lg w-125 backdrop-blur-md bg-blue-500/90" aria-labelledby="dropdownUsersButton">
+                            <ul className="m-1 h-35 py-2 overflow-y-auto text-gray-700 dark:text-gray-200 bg-blue-500 rounded-xl shadow-lg w-125 backdrop-blur-md" aria-labelledby="dropdownUsersButton">
                                 <li
                                     onClick={() => handleSkillChange("languages")}>
                                     <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
