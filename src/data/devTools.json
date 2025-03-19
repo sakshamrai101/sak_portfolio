@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Docker",
+        "years": 2
+    },
+    {
+        "name": "Git/GitHub",
+        "years": 4
+    },
+    {
+        "name": "Amazon Web Services",
+        "years": 2
+    },
+    {
+        "name": "Chrome Devtools",
+        "years": 3
+    },
+    {
+        "name": "Postman",
+        "years": 3
+    }
+]

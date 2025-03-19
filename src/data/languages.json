@@ -1,0 +1,28 @@
+[
+    {   "name": "Javascript",  "years": 3 
+    },
+    {
+        "name": "Python", "years": 3
+    },
+    {
+        "name": "Typescript", "years": 2
+    },
+    {
+        "name": "Java", "years": 2
+    },
+    {
+        "name": "C", "years": 1
+    },
+    {
+        "name": "php", "years": 2
+    },
+    {
+        "name": "C++", "years": 1
+    }, 
+    {
+        "name": "Html/Css", "years": 3
+    },
+    {
+        "name": "Sql", "years": 2
+    }
+]

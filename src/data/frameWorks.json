@@ -1,0 +1,25 @@
+[
+    {
+       "name": "MongoDB", 
+       "years": 3
+    }, {
+        "name": "PostGreSQL", 
+        "years": 2
+    }, {
+        "name": "MySQL", 
+        "years": 3
+    }, {
+        "name": "FireBase", 
+        "years": 1
+    }, {
+        "name": "NextJS", 
+        "years": 2
+    }, {
+        "name": "ReactJS", 
+        "years": 4
+    }, {
+        "name": "LLMs", 
+        "years": 2
+    }
+
+]
