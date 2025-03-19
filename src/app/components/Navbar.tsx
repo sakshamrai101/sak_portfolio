@@ -14,7 +14,7 @@ import instagram from "../../assets/instagram.png";
 export const Navbar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
-    const [hoveredItem, setHoveredItem] = useState<string | null>(null); // Track hovered icon
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null); 
 
     // Sidebar Items
     const sidebarLinks = [
@@ -67,7 +67,7 @@ export const Navbar = () => {
                                     onMouseLeave={() => setHoveredItem(null)}
                                 >
                                     {hoveredItem === item.id && !isExpanded ? (
-                                        <span className="w-auto ml-2 text-xs text-white whitespace-nowrap">{item.label}</span>
+                                        <span className="w-auto ml-auto absolute text-xs justify-center text-white whitespace-pre-wrap">{item.label}</span>
                                     ) : (
                                         <img src={item.src} alt={item.label} className="w-6 h-6" />
                                     )}
