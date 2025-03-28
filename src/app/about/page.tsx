@@ -2,9 +2,9 @@
 import dynamic from "next/dynamic";
 import "../global.css"
 import { useState } from "react";
-import codeImage from "../../assets/code.png";
-import devTools from "../../assets/devTools.png";
-import database from "../../assets/database.png";
+import codeImage from "../../../public/assets/code.png";
+import devTools from "../../../public/assets/devTools.png";
+import database from "../../../public/assets/database.png";
 import { Navbar } from "../components/Navbar";
 
 

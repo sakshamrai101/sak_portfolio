@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import house from "../../assets/home.png";
-import about from "../../assets/about_me.png";
-import work from "../../assets/briefcase.png";
-import portfolio from "../../assets/projects.png";
-import mail from "../../assets/mail.png";
-import linkedIn from "../../assets/linkedin.png";
-import twitter from "../../assets/twitter.png";
-import github from "../../assets/github.png";
-import instagram from "../../assets/instagram.png";
+import house from "../../../public/assets/home.png";
+import about from "../../../public/assets/about_me.png";
+import work from "../../../public/assets/briefcase.png";
+import portfolio from "../../../public/assets/projects.png";
+import mail from "../../../public/assets/mail.png";
+import linkedIn from "../../../public/assets/linkedin.png";
+import twitter from "../../../public/assets/twitter.png";
+import github from "../../../public/assets/github.png";
+import instagram from "../../../public/assets/instagram.png";
 
 export const Navbar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -67,7 +67,7 @@ export const Navbar = () => {
                                     onMouseLeave={() => setHoveredItem(null)}
                                 >
                                     {hoveredItem === item.id && !isExpanded ? (
-                                        <span className="w-auto ml-auto absolute text-xs justify-center text-white whitespace-pre-wrap">{item.label}</span>
+                                        <span className="w-auto ml-auto text-xs justify-center text-white whitespace-pre-wrap">{item.label}</span>
                                     ) : (
                                         <img src={item.src} alt={item.label} className="w-6 h-6" />
                                     )}
