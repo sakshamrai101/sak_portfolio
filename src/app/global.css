@@ -1,6 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Passions+Conflict&family=Ysabeau+SC:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Josefin+Sans:wght@100&family=Passions+Conflict&family=Ysabeau+SC:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Fontdiner+Swanky&family=Josefin+Sans:wght@100&family=Passions+Conflict&family=Ysabeau+SC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 @import "tailwindcss";
+@keyframes heroPop {
+    0% {
+        transform: scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
 
+    50% {
+        transform: scale(1.1) rotate(15deg);
+        opacity: 1;
+    }
 
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes pulseSlow {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-hero-pop {
+    animation: heroPop 1.2s ease-out forwards;
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+}
+
+.bg-gradient-radial {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 70%);
+}
+@keyframes terminal-typewriter {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes terminal-cursor-blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.terminal-type {
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    display: inline-block;
+}
+
+.typed-terminal-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+    padding-top: 20px;
+    animation: terminal-typewriter 2.5s steps(30, end) forwards;
+}
+
+.terminal-cursor {
+    display: inline-block;
+    margin-left: 4px;
+    animation: terminal-cursor-blink 0.75s step-end infinite;
+    color: orange;
+}
+@keyframes slowRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseSlow {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-slow-rotate {
+    animation: slowRotate 20s linear infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 6s ease-in-out infinite;
+}
+
+.bg-gradient-radial {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+}

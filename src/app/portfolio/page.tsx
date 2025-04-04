@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 import { ProjectCard } from "../components/projectCard";
 import "../global.css";
 import projectArray from "../../data/projects.json";
-
+import React from "react";
 export default function Portfolio () {
     return (
         <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-cyan-500 to-blue-500">
