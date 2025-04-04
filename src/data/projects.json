@@ -1,45 +1,50 @@
 [
-    {
-        "name": "Drug Checking Program Portal",
-        "description": "Built for San Diego County, this web-based platform helps citizens easily check and track their drug test results in real-time. ",
-        "img": "/assets/dcp.png",
-        "link": "https://dcp-sd-county.vercel.app/",
-        "stack": "NodeJs, ReactJS, PostgreSQL, Typescript"
-
-    },
-    {
-        "name": "GymScout",
-        "description": "Full-stack location-based gym location app with real-time review and ratings system",
-        "img": "/assets/gymScout.png",
-        "link": "https://www.gymscout.in/",
-        "stack": "NodeJs, ReactJS, MongoDB, Typescript"
+        {
+            "name": "GymScout",
+            "description": "Full-stack location-based gym location app with real-time review and ratings system.",
+            "img": "/assets/gymScout.png",
+            "link": "https://www.gymscout.in/",
+            "stack": [
+                "Node.js, React, MongoDB, TypeScript"
+            ]
+        },
+        {
+                "name": "Abel",
+                "description": "An multi-language speech-bot designed to offer realtime AI-based voice-conversations with personalized conversational avatars.",
+                "img": "/assets/abel.png",
+                "link": "https://talktoabel.com/",
+                "stack": [
+                    "Node.js, Firebase, WebSockets, ONNX, Whisper"
+                ]
     },
     {
         "name": "Devsurf",
-        "description": "Full-stack developer journal web-application that helps with increasing developer productivity",
+        "description": "Full-stack developer journal web-application that helps in increasing developer productivity.",
         "img": "/assets/devSurf.png",
         "link": "https://dev-surf.vercel.app/",
-        "stack": "NodeJs, ReactJS, MongoDB, Typescript"
+        "stack": ["Node.js, React, MongoDB, TypeScript"]
     },
     {
-        "name": "Abel",
-        "description": "An innovative multi-language speech-bot designed to offer realtime voice-conversations and leveraging AI to offer fun, personalized conversational avatars.",
-        "img": "/assets/abel.png",
-        "link": "https://talktoabel.com/",
-        "tech-stack": "Next.js, Firebase, WebSockets, ONNX, OpenAI, Whisper, VAD"
+        "name": "Drug Checking Program Portal",
+        "description": "Web-based platform that helps citizens easily check and track their drug test results in real-time. ",
+        "img": "/assets/dcp.png",
+        "link": "https://dcp-sd-county.vercel.app/",
+        "stack": [
+            "Node.js, React, PostgreSQL, TypeScript"
+        ]
     },
     {
         "name": "Moon-Markers 2.0",
-        "description": "A web application that allows space-enthusiasts to visualise moon-quakes on a 3D render of the moon, utilisng the official Apollo Seismic Event Catalogue.",
-        "img": "/assets/moon.avif",
+        "description": "A web application that allows space-enthusiasts to visualise moon-quakes on a 3D render of the moon, from the Apollo Seismic Event Catalogue.",
+        "img": "/assets/moon.png",
         "link": "https://moon-markers.netlify.app/",
-        "stack": "Python, ThreeJs, MySQL, React"
+        "stack": ["Python, MySQL, React"]
     },
     {
         "name": "SD Naloxone Website",
-        "description": "Developed for a non-profit organization, this platform facilitates the distribution of Naloxone, a life-saving medication, ensuring it's readily available for individuals at risk of opioid overdose.",
+        "description": "This platform facilitates the distribution of Naloxone, a life-saving medication for individuals at risk of opioid overdose.",
         "img": "/assets/sd.png",
         "link": "https://sdnaloxone.org/",
-        "stack": "PHP, MySQL, Javascript, CSS, HTML"
+        "stack": ["PHP, MySQL, JavaScript, CSS, HTML"]
     }
 ]
