@@ -1,0 +1,45 @@
+[
+    {
+        "name": "LA County",
+        "description": "Built a secure platform powering 21 vending machines to distribute anti-opioid kits to 8,000+ users across LA County.",
+        "src": "/assets/la.jpeg",
+        "time": "October'24 - Present"
+    },
+    {
+        "name": "SD County",
+        "description": "Automated database sync with Google Sheets API, enabling 24/7 live updates for field teams.",
+        "src": "/assets/sd.png",
+        "time": "September'24 - Present"
+    },
+    {
+        "name": "AfyaChat",
+        "description": "Built GPT-powered microservices and RAG pipelines for an AI eConsultation tool, cutting PCP-specialist delays by 50%.",
+        "src": "/assets/afya.png",
+        "time": "March'24 - April'24"
+    },
+    {
+        "name": "Karya-Productivity",
+        "description": "Co-founded an AI-driven productivity SaaS, built MVP with LLMs + Google Calendar sync, and onboarded 50+ beta users.",
+        "src": "/assets/karya.png",
+        "time": "June'23 - May'23"
+    },
+    {
+        "name": "SD County",
+        "description": "Developed a real-time reporting dashboard for harm reduction programs serving 10k+ citizens.",
+        "src": "/assets/sd.png",
+        "time": "Dec'22 - June'23"
+    },
+    {
+        "name": "UCSD ITS Department",
+        "description": "Built Groovy and batch scripts to automate budget planning in Oracle EPBC for UCSD-wide financial ops.",
+        "src": "/assets/ucsd.png",
+        "time": "Sept'22 - Dec'22"
+    },
+    {
+        "name": "Blacklogics",
+        "description": "Redesigned the landing page, optimized SEO, and secured the site to boost client leads for a landscaping startup.",
+        "src": "/assets/blacklogics.png",
+        "time": "Sept'22 - Dec'22"
+    }
+
+]
