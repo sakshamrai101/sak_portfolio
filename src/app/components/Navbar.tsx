@@ -69,7 +69,7 @@ export const Navbar = () => {
                     {/* Middle Navigation (Vertically centered) */}
                     <div className="flex flex-col justify-center grow px-2">
                         <ul className="space-y-2 font-medium text-white">
-                            {sidebarLinks.slice(0, 4).map((item) => (
+                            {sidebarLinks.slice(0, 5).map((item) => (
                                 <li key={item.id}>
                                     <Link
                                         href={item.href}
