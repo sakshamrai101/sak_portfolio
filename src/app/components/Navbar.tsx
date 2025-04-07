@@ -10,20 +10,21 @@ import linkedIn from "../../../public/assets/linkedin.png";
 import twitter from "../../../public/assets/twitter.png";
 import github from "../../../public/assets/github.png";
 import instagram from "../../../public/assets/instagram.png";
+import Link from "next/link";
 
 export const Navbar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [hoveredItem, setHoveredItem] = useState<string | null>(null); 
 
-    // Sidebar Items
     const sidebarLinks = [
-        { id: "home", src: house.src, label: "Home" },
-        { id: "about", src: about.src, label: "About Me" },
-        { id: "work", src: work.src, label: "Work" },
-        { id: "portfolio", src: portfolio.src, label: "Portfolio" },
-        { id: "mail", src: mail.src, label: "Contact Me" },
+        { id: "home", src: house.src, label: "Home", href: "/landing" },
+        { id: "about", src: about.src, label: "About Me", href: "/about" },
+        { id: "work", src: work.src, label: "Work", href: "/work" },
+        { id: "portfolio", src: portfolio.src, label: "Portfolio", href: "/portfolio" },
+        { id: "mail", src: mail.src, label: "Contact Me", href: "/contact" },
     ];
+
 
     // Social Links
     const socialLinks = [
@@ -60,25 +61,30 @@ export const Navbar = () => {
                     <ul className="space-y-2 font-medium text-white">
                         {sidebarLinks.map((item) => (
                             <li key={item.id}>
-                                <a
-                                    href="#"
+                                <Link
+                                    href={item.href}
                                     className="flex items-center p-2 rounded-lg hover:bg-gray-700 transition-all duration-200"
                                     onMouseEnter={() => setHoveredItem(item.id)}
                                     onMouseLeave={() => setHoveredItem(null)}
                                 >
                                     {hoveredItem === item.id && !isExpanded ? (
-                                        <span className="w-auto ml-auto text-xs justify-center text-white whitespace-pre-wrap">{item.label}</span>
+                                        <span className="w-auto ml-auto text-xs justify-center text-white whitespace-pre-wrap">
+                                            {item.label}
+                                        </span>
                                     ) : (
                                         <img src={item.src} alt={item.label} className="w-6 h-6" />
                                     )}
-                                    <span className={`ms-3 transition-all duration-200 ${isExpanded || isMobileOpen ? "opacity-100 w-auto" : "opacity-0 w-0"
-                                        }`}>
+                                    <span
+                                        className={`ms-3 transition-all duration-200 ${isExpanded || isMobileOpen ? "opacity-100 w-auto" : "opacity-0 w-0"
+                                            }`}
+                                    >
                                         {item.label}
                                     </span>
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
+
 
                     {/* Social Links */}
                     <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-600 text-white">

@@ -40,7 +40,7 @@ export default function About({ }) {
     return (
         <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-cyan-500 to-blue-500">
             <Navbar />
-            <div className="w-full max-w-6xl flex justify-center items-center">
+            <div className="w-full max-w-6xl flex justify-center items-start">
 
                 {/* Left Section */}
                 <div className="flex flex-col text-left max-w-lg">
@@ -84,7 +84,7 @@ export default function About({ }) {
                                 onClick={() => handleSkillChange("frameWorks")}>
                                 <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                     <img className="w-6 h-6 mr-2 rounded-full" src={database.src} alt="Database image" />
-                                    <span style={{ fontFamily: '"Borel", cursive' }}>Databases, Frameworks and Technologies </span>
+                                    <span style={{ fontFamily: '"Borel", cursive' }}>Technologies </span>
                                 </a>
                             </li>
                             <li
@@ -95,7 +95,7 @@ export default function About({ }) {
                                 </a>
                             </li>
                         </ul>
-                    )}
+                    )}  
                     <div className="mt-6">
                         <RChart currentState={selectState} />
                     </div>

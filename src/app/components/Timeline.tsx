@@ -40,12 +40,12 @@ const Timeline: React.FC = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
                                     transition={{ duration: 0.3 }}
-                                    className="absolute top-full mt-4 left-1/2 -translate-x-1/2 w-80 p-4 rounded-2xl shadow-2xl border border-white/10 bg-gradient-to-br from-white/80 to-blue-100 backdrop-blur-lg text-black z-10"
+                                    className="absolute top-full mt-4 left-1/2 -translate-x-1/2 w-80 p-4 rounded-2xl shadow-2xl border border-white/10 bg-gradient-to-br  bg-blue-500 backdrop-blur-lg text-black z-10"
                                 >
-                                    <h3 className="font-bold text-lg mb-2 text-center text-blue-800 drop-shadow">
+                                    <h3 className="font-bold text-lg mb-2 text-center text-white drop-shadow">
                                         {item.time}
                                     </h3>
-                                    <p className="text-sm leading-relaxed text-gray-800">
+                                    <p className="text-sm leading-relaxed text-white -800">
                                         {item.description}
                                     </p>
                                 </motion.div>
