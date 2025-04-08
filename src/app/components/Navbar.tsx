@@ -58,7 +58,7 @@ export const Navbar = () => {
                 className={`
                     fixed top-0 left-0 z-40 h-screen bg-gray-800 dark:bg-gray-700 overflow-y-auto
                     transition-all duration-300 ease-in-out
-                    ${isMobileOpen ? "w-64" : isExpanded ? "w-80" : "w-0 sm:w-16"}
+                    ${isMobileOpen ? "w-64" : isExpanded ? "w-40" : "w-0 sm:w-16"}
                 `}
                 onMouseEnter={() => !isMobileOpen && setIsExpanded(true)}
                 onMouseLeave={() => !isMobileOpen && setIsExpanded(false)}
