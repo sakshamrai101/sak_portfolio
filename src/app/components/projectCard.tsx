@@ -1,4 +1,5 @@
 "use client";
+import { StaticImageData } from "next/image";
 import { Link } from "react-feather";
 import "../global.css";
 import react from "../../../public/assets/react.png";
@@ -27,7 +28,7 @@ interface projectProps {
     techStack: string [] | undefined
 }
 
-const techIcons: { [key: string]: any } = {
+const techIcons: { [key: string]: StaticImageData | { src: string } } = {
     "Node.js": nodejs,
     "React": react,
     "Next.js": nextjs,

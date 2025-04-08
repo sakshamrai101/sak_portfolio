@@ -41,7 +41,7 @@ export default function LandingPage() {
                     <div className="absolute w-[200px] h-[200px] sm:w-[150px] sm:h-[150px] md:w-[300px] md:h-[300px] rounded-full bg-gradient-radial from-white/20 to-transparent blur-3xl animate-pulse-slow z-0" />
 
                     {/* Logo image */}
-                    <img
+                    <img 
                         src={mainLogo.src}
                         alt="Main Logo"
                         className="relative z-10 w-32 h-32 sm:w-20 sm:h-20 md:w-80 md:h-80 object-contain animate-bounce drop-shadow-[0_0_40px_rgba(255,255,255,0.4)]"
