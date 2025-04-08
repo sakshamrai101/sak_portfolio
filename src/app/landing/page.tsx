@@ -5,6 +5,7 @@ import "../global.css";
 import React from "react";
 import mainLogo from "../../../public/assets/mainLogo.png";
 import TypewriterText from "../components/TypewriterText";
+import Link from "next/link";
 
 export default function LandingPage() {
     return (
@@ -28,10 +29,11 @@ export default function LandingPage() {
                         <p className="text-base sm:text-lg md:text-xl font-bold text-white animate-pulse">
                             Math, CS and AI @ UCSD 2024
                         </p>
-
-                        <button className="mt-3 px-3 py-2 sm:px-8 sm:py-2 md:px-5 md:py-3 text-sm sm:text-base bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300">
-                            Contact Me
-                        </button>
+                        <Link href="/contact">
+                            <button className="mt-3 px-3 py-2 sm:px-8 sm:py-2 md:px-5 md:py-3 text-sm sm:text-base bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300">
+                                Contact Me
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
