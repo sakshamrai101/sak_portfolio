@@ -54,24 +54,20 @@ export const Navbar = () => {
                 ☰
             </button>
 
-            {/* Hover Trigger Area for Desktop */}
-            <div
-                className="hidden sm:block fixed top-0 left-0 h-screen w-2 hover:w-6 bg-transparent"
-                onMouseEnter={() => setIsExpanded(true)}
-            />
-
+            {/* Sidebar */}
             <aside
                 className={`
-          fixed top-0 left-0 z-40 h-screen bg-gray-800 dark:bg-gray-700 overflow-y-auto
-          transition-all duration-300 ease-in-out
-          ${isMobileOpen ? "w-screen" : isExpanded ? "w-80" : "w-15"}
-          sm:${isExpanded ? "w-80" : "w-16"}
-        `}
-                onMouseLeave={() => setIsExpanded(false)}
+                    fixed top-0 left-0 z-40 h-screen bg-gray-800 dark:bg-gray-700 overflow-y-auto
+                    transition-all duration-300 ease-in-out
+                    ${isMobileOpen ? "w-64" : "w-0 sm:w-16"}
+                    ${isExpanded && !isMobileOpen ? "sm:w-80" : ""}
+                `}
+                onMouseEnter={() => !isMobileOpen && setIsExpanded(true)}
+                onMouseLeave={() => !isMobileOpen && setIsExpanded(false)}
                 style={{ fontFamily: '"Borel", cursive' }}
             >
                 <div className="h-full flex flex-col justify-between">
-                    {/* Top Logo — Hidden on Mobile */}
+                    {/* Top Logo */}
                     <div className="p-4 hidden sm:block">
                         <img
                             src="/assets/mainLogo.png"
@@ -80,7 +76,7 @@ export const Navbar = () => {
                         />
                     </div>
 
-                    {/* Middle Navigation */}
+                    {/* Navigation */}
                     <div className="flex flex-col justify-center grow px-2">
                         <ul className="space-y-2 font-medium text-white">
                             {sidebarLinks.map((item) => (
@@ -91,13 +87,7 @@ export const Navbar = () => {
                                         onMouseEnter={() => setHoveredItem(item.id)}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        {hoveredItem === item.id && !isExpanded ? (
-                                            <span className="absolute left-full -translate-x-[90%] text-xs text-white px-3 py-2 rounded-md shadow-lg whitespace-nowrap z-50">
-                                                {item.label}
-                                            </span>
-                                        ) : (
-                                            <img src={item.src} alt={item.label} className="w-6 h-6" />
-                                        )}
+                                        <img src={item.src} alt={item.label} className="w-6 h-6" />
                                         <span className={`ms-3 transition-all duration-200 ${isExpanded || isMobileOpen ? "opacity-100 w-auto" : "opacity-0 w-0"}`}>
                                             {item.label}
                                         </span>
@@ -107,7 +97,7 @@ export const Navbar = () => {
                         </ul>
                     </div>
 
-                    {/* Bottom Social Links */}
+                    {/* Social Links */}
                     <div className="px-2 pb-4">
                         <ul className="space-y-2 font-medium text-white pt-4">
                             {socialLinks.map((item) => (
@@ -120,13 +110,7 @@ export const Navbar = () => {
                                         onMouseEnter={() => setHoveredItem(item.id)}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        {hoveredItem === item.id && !isExpanded ? (
-                                            <span className="absolute left-full -translate-x-[90%] text-xs text-white px-1 py-2 rounded-md shadow-lg whitespace-nowrap z-50">
-                                                {item.label}
-                                            </span>
-                                        ) : (
-                                            <img src={item.src} alt={item.label} className="w-6 h-6" />
-                                        )}
+                                        <img src={item.src} alt={item.label} className="w-6 h-6" />
                                         <span className={`ms-3 transition-all duration-200 ${isExpanded || isMobileOpen ? "opacity-100 w-auto" : "opacity-0 w-0"}`}>
                                             {item.label}
                                         </span>
