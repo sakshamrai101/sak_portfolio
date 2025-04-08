@@ -4,37 +4,60 @@ import { ProjectCard } from "../components/projectCard";
 import "../global.css";
 import projectArray from "../../data/projects.json";
 import React from "react";
-export default function Portfolio () {
+import { motion } from "framer-motion"; // 🔥 import
+
+export default function Portfolio() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-cyan-500 to-blue-500">
+        <div className="min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 relative overflow-x-hidden">
             <Navbar />
 
-            <div className="flex flex-col gap-4 p-4">
-                <div className="w-full max-w-6xl flex items-left justify-center">
-                    <p className="text-6xl m-6 group relative w-max">
-                        <span className="px-1 relative z-10 group-hover:text-white" style={{ fontFamily: `"Borel", "cursive"` }}>Portfolio</span>
+            <div className="ml-16 sm:ml-0 flex flex-col gap-6 px-4 sm:px-6 py-10">
+                {/* Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-full max-w-6xl flex justify-center"
+                >
+                    <p
+                        className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 group relative w-max text-white"
+                        style={{ fontFamily: `"Borel", "cursive"` }}
+                    >
+                        <span className="px-1 relative z-10 group-hover:text-white">
+                            Portfolio
+                        </span>
                         <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
                     </p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-1 relative z-10 group-hover:text-white" style={{ fontFamily: `"Borel", "cursive"` }}>
+                </motion.div>
+
+                {/* Projects Grid */}
+                <div
+                    className="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+                    style={{ fontFamily: `"Borel", "cursive"` }}
+                >
                     {projectArray.map((project, index) => (
-                        <ProjectCard 
-                            key ={index} 
-                            title={project.name}
-                            description={project.description}
-                            img={project.img}
-                            link={project.link}
-                            techStack={
-                                (project.stack || project["stack"] || [])
-                                .join("")
-                                .split(",")
-                                .map(t => t.trim())
-                            }
-                        />
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                        >
+                            <ProjectCard
+                                title={project.name}
+                                description={project.description}
+                                img={project.img}
+                                link={project.link}
+                                techStack={
+                                    (project.stack || project["stack"] || [])
+                                        .join("")
+                                        .split(",")
+                                        .map((t) => t.trim())
+                                }
+                            />
+                        </motion.div>
                     ))}
                 </div>
             </div>
-
         </div>
     );
-};
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import house from "../../../public/assets/home.png";
 import about from "../../../public/assets/about_me.png";
 import work from "../../../public/assets/briefcase.png";
@@ -15,16 +15,19 @@ import Link from "next/link";
 export const Navbar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
-    const [hoveredItem, setHoveredItem] = useState<string | null>(null); 
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+    useEffect(() => {
+        document.body.style.overflow = isMobileOpen ? "hidden" : "auto";
+    }, [isMobileOpen]);
 
     const sidebarLinks = [
         { id: "home", src: house.src, label: "Landing", href: "/landing" },
         { id: "about", src: about.src, label: "About Me", href: "/about" },
         { id: "work", src: work.src, label: "Work Ex.", href: "/work" },
         { id: "portfolio", src: portfolio.src, label: "Portfolio", href: "/portfolio" },
-        { id: "mail", src: mail.src, label: "Contact Me", href: "/contact" },
+        { id: "mail", src: mail.src, label: "Contact", href: "/contact" },
     ];
-
 
     const socialLinks = [
         { id: "linkedin", src: linkedIn.src, label: "LinkedIn", href: "https://www.linkedin.com/in/saksham-rai-4477431ab/" },
@@ -35,6 +38,13 @@ export const Navbar = () => {
 
     return (
         <div className="relative">
+            {/* Mobile Overlay */}
+            {isMobileOpen && (
+                <div
+                    className="fixed inset-0 bg-black opacity-50 z-30 sm:hidden"
+                    onClick={() => setIsMobileOpen(false)}
+                />
+            )}
 
             {/* Mobile Toggle Button */}
             <button
@@ -51,25 +61,29 @@ export const Navbar = () => {
             />
 
             <aside
-                className={`fixed top-0 left-0 z-40 h-screen bg-gray-800 dark:bg-gray-700 overflow-y-auto transition-all duration-300 ease-in-out ${isExpanded || isMobileOpen ? "w-80" : "w-16"
-                    }`}
+                className={`
+          fixed top-0 left-0 z-40 h-screen bg-gray-800 dark:bg-gray-700 overflow-y-auto
+          transition-all duration-300 ease-in-out
+          ${isMobileOpen ? "w-screen" : isExpanded ? "w-80" : "w-15"}
+          sm:${isExpanded ? "w-80" : "w-16"}
+        `}
                 onMouseLeave={() => setIsExpanded(false)}
                 style={{ fontFamily: '"Borel", cursive' }}
             >
                 <div className="h-full flex flex-col justify-between">
-                    {/* Top Logo */}
-                    <div className="p-4">
+                    {/* Top Logo — Hidden on Mobile */}
+                    <div className="p-4 hidden sm:block">
                         <img
                             src="/assets/mainLogo.png"
                             alt="Logo"
-                            className={`animate-bounce transition-all duration-30 ${isExpanded || isMobileOpen ? "w-24" : "w-8"}`}
+                            className={`animate-bounce transition-all duration-300 ${isExpanded ? "w-24" : "w-8"}`}
                         />
                     </div>
 
-                    {/* Middle Navigation (Vertically centered) */}
+                    {/* Middle Navigation */}
                     <div className="flex flex-col justify-center grow px-2">
                         <ul className="space-y-2 font-medium text-white">
-                            {sidebarLinks.slice(0, 5).map((item) => (
+                            {sidebarLinks.map((item) => (
                                 <li key={item.id}>
                                     <Link
                                         href={item.href}
@@ -78,7 +92,7 @@ export const Navbar = () => {
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
                                         {hoveredItem === item.id && !isExpanded ? (
-                                            <span className="absolute left-full -translate-x-[90%] text-xs text-white bg-gray-900 px-3 py-2 rounded-md shadow-lg whitespace-nowrap z-50 items-center justify-center">
+                                            <span className="absolute left-full -translate-x-[90%] text-xs text-white px-3 py-2 rounded-md shadow-lg whitespace-nowrap z-50">
                                                 {item.label}
                                             </span>
                                         ) : (
@@ -107,7 +121,7 @@ export const Navbar = () => {
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
                                         {hoveredItem === item.id && !isExpanded ? (
-                                            <span className="absolute left-full -translate-x-[90%] text-xs text-white bg-gray-900 px-1 py-2 rounded-md shadow-lg whitespace-nowrap z-50 items-center">
+                                            <span className="absolute left-full -translate-x-[90%] text-xs text-white px-1 py-2 rounded-md shadow-lg whitespace-nowrap z-50">
                                                 {item.label}
                                             </span>
                                         ) : (
@@ -123,7 +137,6 @@ export const Navbar = () => {
                     </div>
                 </div>
             </aside>
-
         </div>
     );
 };

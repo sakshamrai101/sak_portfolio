@@ -1,5 +1,5 @@
 import { useState } from "react";
-import experiences from "../../data/experiences.json"; // Adjust path
+import experiences from "../../data/experiences.json";
 import TimelineItem from "./TimelineItem";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -19,13 +19,18 @@ const Timeline: React.FC = () => {
 
     return (
         <div
-            className="relative w-full py-20 px-12"
-            style={{ fontFamily: '"Borel", "cursive"' }}
+            className="relative w-full max-w-full py-10 px-4 sm:px-6 md:px-12 overflow-x-hidden"
+            style={{ fontFamily: '"Borel", cursive' }}
         >
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-45 gap-y-35">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-30 sm:gap-6 md:gap-8">
                 {experiences.map((item: Experience, index: number) => (
-                    <div key={index} className="relative">
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1, duration: 0.5 }}
+                        className="relative"
+                    >
                         <TimelineItem
                             item={item}
                             isOpen={openIndex === index}
@@ -36,23 +41,20 @@ const Timeline: React.FC = () => {
                         <AnimatePresence>
                             {openIndex === index && (
                                 <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: 10 }}
+                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                     transition={{ duration: 0.3 }}
-                                    className="absolute top-full mt-4 left-1/2 -translate-x-1/2 w-80 p-4 rounded-2xl shadow-2xl border border-white/10 bg-gradient-to-br bg-blue-500 backdrop-blur-lg text-black z-10"
+                                    className="absolute top-full mt-4 left-1/2 -translate-x-1/2 w-[90vw] sm:w-72 p-4 rounded-2xl shadow-2xl border border-white/10 bg-gradient-to-br from-blue-500 to-blue-600 backdrop-blur-lg text-white z-10"
                                 >
-                                    <h3 className="font-bold text-lg mb-2 text-center text-white drop-shadow">
+                                    <h3 className="font-bold text-lg mb-2 text-center drop-shadow">
                                         {item.time}
                                     </h3>
-                                    <p className="text-sm leading-relaxed text-white -800">
-                                        {item.description}
-                                    </p>
+                                    <p className="text-sm leading-relaxed">{item.description}</p>
                                 </motion.div>
-
                             )}
                         </AnimatePresence>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

@@ -1,36 +1,64 @@
 "use client";
 import React from "react";
 import { Navbar } from "../components/Navbar";
-import "../global.css"
+import "../global.css";
 import ContactForm from "../components/ContactForm";
+import { motion } from "framer-motion"; // 🔥
 
-export default function Contact () {
+export default function Contact() {
     return (
-        <div className="min-h-screen flex justify-center items-center bg-linear-to-r from bg-cyan-500 to-blue-600">
+        <div className="min-h-screen bg-gradient-to-r from-cyan-500 to-blue-600 relative overflow-x-hidden">
             <Navbar />
-            <div className="w-full max-w-full flex items-start justify-center">
 
-
-                <div className="flex flex-col text-left max-w-lg">
-                    <p className="text-6xl m-6 group relative w-max">
-                        <span className="px-1 relative z-10 group-hover:text-white" style={{ fontFamily: '"Borel", cursive' }}>Contact Me</span>
+            <div className="ml-16 sm:ml-0 flex flex-col items-center justify-start w-full px-4 sm:px-6 py-10 gap-8 sm:gap-10">
+                {/* Heading + Resume */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-full max-w-4xl flex flex-col gap-4 text-left"
+                >
+                    <p
+                        className="text-3xl sm:text-4xl md:text-6xl m-4 group relative w-max text-white"
+                        style={{ fontFamily: '"Borel", cursive' }}
+                    >
+                        <span className="px-1 relative z-10 group-hover:text-white">
+                            Contact Me
+                        </span>
                         <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
                     </p>
 
-                    <a href="7MonthRes.pdf" target="_blank"
-                        rel="noopener noreferrer" style={{ fontFamily: '"Borel", cursive' }} className="ml-15 px-20 py-1 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300 flex items-start gap-1 w-max">
-
+                    <a
+                        href="7MonthRes.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ fontFamily: '"Borel", cursive' }}
+                        className="px-6 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300 flex items-center gap-2 w-max"
+                    >
                         Resume
-                        <img src="assets/resume.png" alt="resume icon" className="w-6 h-6" />
+                        <img src="assets/resume.png" alt="resume icon" className="w-5 h-5" />
                     </a>
-                </div>
-            </div>
-            <div className="bg-white/20 backdrop-blur-md rounded-xl shadow-2xl p-8 w-full max-w-xl space-y-6 text-black m-25">
+                </motion.div>
 
-                <h2 className="text-3xl font-semibold" style={{ fontFamily: '"Borel", cursive' }}>
-                    Thank you for your interest in getting in touch!
-                </h2>
-                <ContactForm />
+                {/* Contact Form Box */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-white/20 backdrop-blur-md rounded-xl shadow-2xl py-6 px-4 sm:px-8 sm:py-20 mx-4 sm:mx-10 max-w-xl space-y-6 text-black w-auto"
+                >
+                    <motion.h2
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.4 }}
+                        className="text-xl sm:text-2xl md:text-3xl font-semibold text-white"
+                        style={{ fontFamily: '"Borel", cursive' }}
+                    >
+                        Thank you for your interest in getting in touch!
+                    </motion.h2>
+
+                    <ContactForm />
+                </motion.div>
             </div>
         </div>
     );
