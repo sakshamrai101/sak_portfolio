@@ -15,7 +15,6 @@ import Link from "next/link";
 export const Navbar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
-    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
     useEffect(() => {
         document.body.style.overflow = isMobileOpen ? "hidden" : "auto";
@@ -59,8 +58,7 @@ export const Navbar = () => {
                 className={`
                     fixed top-0 left-0 z-40 h-screen bg-gray-800 dark:bg-gray-700 overflow-y-auto
                     transition-all duration-300 ease-in-out
-                    ${isMobileOpen ? "w-64" : "w-0 sm:w-16"}
-                    ${isExpanded && !isMobileOpen ? "sm:w-80" : ""}
+                    ${isMobileOpen ? "w-64" : isExpanded ? "w-80" : "w-0 sm:w-16"}
                 `}
                 onMouseEnter={() => !isMobileOpen && setIsExpanded(true)}
                 onMouseLeave={() => !isMobileOpen && setIsExpanded(false)}
@@ -84,8 +82,6 @@ export const Navbar = () => {
                                     <Link
                                         href={item.href}
                                         className="flex whitespace-nowrap items-left p-2 rounded-lg hover:bg-gray-700 transition-all duration-200"
-                                        onMouseEnter={() => setHoveredItem(item.id)}
-                                        onMouseLeave={() => setHoveredItem(null)}
                                     >
                                         <img src={item.src} alt={item.label} className="w-6 h-6" />
                                         <span className={`ms-3 transition-all duration-200 ${isExpanded || isMobileOpen ? "opacity-100 w-auto" : "opacity-0 w-0"}`}>
@@ -107,8 +103,6 @@ export const Navbar = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex relative items-center p-2 rounded-lg hover:bg-gray-700 transition-all duration-200"
-                                        onMouseEnter={() => setHoveredItem(item.id)}
-                                        onMouseLeave={() => setHoveredItem(null)}
                                     >
                                         <img src={item.src} alt={item.label} className="w-6 h-6" />
                                         <span className={`ms-3 transition-all duration-200 ${isExpanded || isMobileOpen ? "opacity-100 w-auto" : "opacity-0 w-0"}`}>

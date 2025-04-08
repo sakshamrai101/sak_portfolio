@@ -1,12 +1,15 @@
 "use client";
+
 import { Navbar } from "../components/Navbar";
 import { ProjectCard } from "../components/projectCard";
 import "../global.css";
 import projectArray from "../../data/projects.json";
-import React from "react";
-import { motion } from "framer-motion"; // 🔥 import
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Portfolio() {
+    const [openCard, setOpenCard] = useState<number | null>(null);
+
     return (
         <div className="min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 relative overflow-x-hidden">
             <Navbar />
@@ -20,12 +23,16 @@ export default function Portfolio() {
                     className="w-full max-w-6xl flex justify-center"
                 >
                     <p
-                        className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 group relative w-max text-white"
+                        className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 relative w-max text-white"
                         style={{ fontFamily: `"Borel", "cursive"` }}
+                        onTouchStart={(e) => {
+                            e.currentTarget.classList.add("bg-blue-600");
+                        }}
+                        onTouchEnd={(e) => {
+                            e.currentTarget.classList.remove("bg-blue-600");
+                        }}
                     >
-                        <span className="px-1 relative z-10 group-hover:text-white">
-                            Portfolio
-                        </span>
+                        <span className="px-1 relative z-10">Portfolio</span>
                         <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
                     </p>
                 </motion.div>
@@ -53,6 +60,8 @@ export default function Portfolio() {
                                         .split(",")
                                         .map((t) => t.trim())
                                 }
+                                isMobileTapOpen={openCard === index}
+                                onToggleTap={() => setOpenCard(openCard === index ? null : index)}
                             />
                         </motion.div>
                     ))}

@@ -1,4 +1,5 @@
 "use client";
+
 import dynamic from "next/dynamic";
 import "../global.css";
 import { useState } from "react";
@@ -7,7 +8,7 @@ import devTools from "../../../public/assets/devTools.png";
 import database from "../../../public/assets/database.png";
 import { Navbar } from "../components/Navbar";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion"; // 🔥 Added
+import { motion, AnimatePresence } from "framer-motion";
 
 const RChart = dynamic(() => import("../components/Radar").then((mod) => mod.RChart), {
     ssr: false,
@@ -30,10 +31,16 @@ export default function About() {
                 {/* Left Section */}
                 <div className="max-w-xl text-left">
                     <p
-                        className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 group relative w-max text-white"
+                        className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 relative w-max text-white"
                         style={{ fontFamily: '"Borel", cursive' }}
+                        onTouchStart={(e) => {
+                            e.currentTarget.classList.add("bg-blue-600");
+                        }}
+                        onTouchEnd={(e) => {
+                            e.currentTarget.classList.remove("bg-blue-600");
+                        }}
                     >
-                        <span className="px-1 relative z-10 group-hover:text-white">About Me</span>
+                        <span className="px-1 relative z-10">About Me</span>
                         <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
                     </p>
                     <p
@@ -108,7 +115,7 @@ export default function About() {
 
                     {/* Radar Chart with entrance animation */}
                     <motion.div
-                        key={selectState} // 🔥 re-trigger animation when state changes
+                        key={selectState}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4 }}

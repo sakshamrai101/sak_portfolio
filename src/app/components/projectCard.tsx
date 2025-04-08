@@ -19,61 +19,66 @@ import js from "../../../public/assets/js.png";
 import html from "../../../public/assets/html.png";
 import css from "../../../public/assets/css.png";
 
-
 interface projectProps {
-    title: string,
-    description: string,
-    img: string,
-    link: string,
-    techStack: string [] | undefined
+    title: string;
+    description: string;
+    img: string;
+    link: string;
+    techStack: string[] | undefined;
+    isMobileTapOpen?: boolean;
+    onToggleTap?: () => void;
 }
 
 const techIcons: { [key: string]: StaticImageData | { src: string } } = {
     "Node.js": nodejs,
-    "React": react,
+    React: react,
     "Next.js": nextjs,
-    "TypeScript": typescript,
-    "PostgreSQL": postgresql,
-    "MongoDB": mongodb,
-    "Firebase": firebase,
-    "WebSockets": websocket,
-    "ONNX": onnx,
-    "Whisper": whisper,
-    "Python": python,
-    "MySQL": mysql,
-    "PHP": php,
-    "JavaScript": js,
-    "HTML": html,
-    "CSS": css,
+    TypeScript: typescript,
+    PostgreSQL: postgresql,
+    MongoDB: mongodb,
+    Firebase: firebase,
+    WebSockets: websocket,
+    ONNX: onnx,
+    Whisper: whisper,
+    Python: python,
+    MySQL: mysql,
+    PHP: php,
+    JavaScript: js,
+    HTML: html,
+    CSS: css,
 };
 
-
-
 export const ProjectCard = (props: projectProps) => {
-    const handleRedirect = ((propParam: string) => {
-        window.location.href= propParam;
-    })
-    return (
+    const handleRedirect = (propParam: string) => {
+        window.location.href = propParam;
+    };
 
-        <div 
-            className="relative max-w-xs overflow-hidden rounded-2xl shadow-lg group"
+    return (
+        <div
+            className="relative max-w-xs overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
+            onClick={props.onToggleTap}
         >
-            <img 
+            <img
                 src={props.img}
                 alt=""
                 className="transition-transform group-hover:scale-110 duration-200 w-full h-70 bg-center bg-cover rounded-lg shadow-lg"
             />
-            <h3 className="text-2xl text-white font-bold my-5 items-center justify-center flex">{props.title}</h3>
-            <div className="absolute inset-0 flex items-center bg-gradient-to-t from-black/30 to-transparent ">
-                <div className="p-3 absolute inset-0 text-white font-semibold opacity-0 group-hover:opacity-90 group-hover:translate-y-0 translate-y-4 transition-all duration-300 bg-blue-600 z-0 group-hover:h-full">
-                    
+            <h3 className="text-2xl text-white font-bold my-5 items-center justify-center flex">
+                {props.title}
+            </h3>
+
+            <div className="absolute inset-0 flex items-center bg-gradient-to-t from-black/30 to-transparent">
+                <div
+                    className={`p-3 absolute inset-0 text-white font-semibold 
+          ${props.isMobileTapOpen ? "opacity-90 translate-y-0 h-full" : "opacity-0 translate-y-4"} 
+          group-hover:opacity-90 group-hover:translate-y-0 group-hover:h-full 
+          transition-all duration-300 bg-blue-600 z-0`}
+                >
                     <div className="my-10 justify-center w-full items-center flex">
-                        <p>
-                            {props.description}
-                        </p>
+                        <p>{props.description}</p>
                     </div>
-                
-                    <div className="w-full justify-center flex">
+
+                    <div className="w-full justify-center flex flex-wrap">
                         {props.techStack?.map((tech) =>
                             techIcons[tech] ? (
                                 <img
@@ -84,13 +89,19 @@ export const ProjectCard = (props: projectProps) => {
                                     className="w-10 h-10 mx-2 transition-transform duration-700 hover:rotate-180"
                                 />
                             ) : (
-                                <span key={tech} className="text-sm text-white/70">{tech}</span>
+                                <span key={tech} className="text-sm text-white/70">
+                                    {tech}
+                                </span>
                             )
                         )}
                     </div>
+
                     <div className="space-x-4 flex mt-4 w-full justify-center items-center">
-                        <button onClick={() => handleRedirect(props.link)} className="flex justify-center items-center gap-2 bg-red-600 text-white px-1 py-2 rounded-xl hover:bg-blue-700 transition" >
-                            <Link href={props.link}/>
+                        <button
+                            onClick={() => handleRedirect(props.link)}
+                            className="flex justify-center items-center gap-2 bg-red-600 text-white px-1 py-2 rounded-xl hover:bg-blue-700 transition"
+                        >
+                            <Link />
                         </button>
                     </div>
                 </div>
