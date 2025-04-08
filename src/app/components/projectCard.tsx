@@ -1,5 +1,5 @@
 "use client";
-import { GitHub, Heart, Link } from "react-feather";
+import { Link } from "react-feather";
 import "../global.css";
 import react from "../../../public/assets/react.png";
 import nodejs from "../../../public/assets/nodejs.png";
