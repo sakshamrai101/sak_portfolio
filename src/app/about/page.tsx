@@ -42,6 +42,7 @@ export default function About() {
                     >
                         <span className="px-1 relative z-10">About Me</span>
                         <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
+                        
                     </p>
                     <p
                         className="text-base sm:text-lg md:text-3xl text-white px-2"
