@@ -13,7 +13,7 @@ export default function Work() {
             {/* Page content with responsive padding and navbar offset */}
             <div className="flex flex-col items-center justify-start w-full ml-16 sm:ml-0 px-4 sm:px-6 pt-10">
                 {/* Heading */}
-                <div className="w-full max-w-6xl flex items-center justify-left">
+                <div className="w-full max-w-6xl flex items-center justify-center">
                     <p
                         className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 relative w-max text-white text-center"
                         style={{ fontFamily: `"Borel", cursive` }}

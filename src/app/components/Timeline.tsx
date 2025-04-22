@@ -21,7 +21,7 @@ const Timeline: React.FC = () => {
     return (
         <div
             className="relative w-full max-w-full py-10 px-4 sm:px-6 md:px-12 overflow-x-hidden"
-            style={{ fontFamily: '"Borel", cursive' }}
+            
         >
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-30 sm:gap-6 md:gap-8">
                 {experiences.map((item: Experience, index: number) => (

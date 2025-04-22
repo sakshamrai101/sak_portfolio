@@ -24,7 +24,7 @@ export default function Portfolio() {
                 >
                     <p
                         className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 relative w-max text-white"
-                        style={{ fontFamily: `"Borel", "cursive"` }}
+                        
                         onTouchStart={(e) => {
                             e.currentTarget.classList.add("bg-blue-600");
                         }}
@@ -40,7 +40,6 @@ export default function Portfolio() {
                 {/* Projects Grid */}
                 <div
                     className="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-                    style={{ fontFamily: `"Borel", "cursive"` }}
                 >
                     {projectArray.map((project, index) => (
                         <motion.div
