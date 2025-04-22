@@ -1,7 +1,7 @@
 [
         {
             "name": "GymScout",
-            "description": "Full-stack location-based gym location app with real-time review and ratings system.",
+            "description": "Full-stack location-based gym discovery app with real-time review and ratings system.",
             "img": "/assets/gymScout.png",
             "link": "https://www.gymscout.in/",
             "stack": [
@@ -10,7 +10,7 @@
         },
         {
                 "name": "Abel",
-                "description": "An multi-language speech-bot designed to offer realtime AI-based voice-conversations with personalized conversational avatars.",
+                "description": "A multi-language speech-bot designed to offer realtime AI-based voice-conversations with personalized conversational avatars.",
                 "img": "/assets/abel.png",
                 "link": "https://talktoabel.com/",
                 "stack": [
@@ -26,7 +26,7 @@
     },
     {
         "name": "Drug Checking Program Portal",
-        "description": "Web-based platform that helps citizens easily check and track their drug test results in real-time. ",
+        "description": "Web-based platform that helps 8,000+ county citizens to easily check and track their drug test results in real-time. ",
         "img": "/assets/dcp.png",
         "link": "https://dcp-sd-county.vercel.app/",
         "stack": [
@@ -35,14 +35,14 @@
     },
     {
         "name": "Moon-Markers 2.0",
-        "description": "A web application that allows space-enthusiasts to visualise moon-quakes on a 3D render of the moon, from the Apollo Seismic Event Catalogue.",
+        "description": "Web app for space-enthusiasts to visualise moon-quakes on a 3D render of the moon using data from the Apollo Seismic Event Catalogue.",
         "img": "/assets/moon.png",
         "link": "https://moon-markers.netlify.app/",
         "stack": ["Python, MySQL, React"]
     },
     {
         "name": "SD Naloxone Website",
-        "description": "This platform facilitates the distribution of Naloxone, a life-saving medication for individuals at risk of opioid overdose.",
+        "description": "Web-based platform to facilitate the distribution of Naloxone, a life-saving anti-opoid medication to 15,000+ county citizens.",
         "img": "/assets/sd.png",
         "link": "https://sdnaloxone.org/",
         "stack": ["PHP, MySQL, JavaScript, CSS, HTML"]

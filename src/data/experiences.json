@@ -1,45 +1,67 @@
 [
     {
-        "name": "LA County",
-        "description": "Built a secure platform powering 21 vending machines to distribute anti-opioid kits to 8,000+ users across LA County.",
-        "src": "/assets/la.jpeg",
-        "time": "October'24 - Present"
+        "name": "Gabriel AI",
+        "description": [
+            "Integrated Firebase Auth, Telnyx APIs, and AWS Lambda/EC2 to handle secure user sessions, SMS/call flows, and infra billing access.",
+            "Resolved routing bugs, implemented UTC timestamp normalization, and enabled CloudWatch logging for $400+/mo backend visibility."
+        ],
+        "src": "/assets/gabriel.png",
+        "time": "April'25 – Present"
     },
     {
-        "name": "SD County",
-        "description": "Automated database sync with Google Sheets API, enabling 24/7 live updates for field teams.",
+        "name": "County of LA",
+        "description": [
+            "Deployed 21 smart vending machines with secure Node.js + PostgreSQL backend serving 13,000+ citizens Naloxone kits.",
+            "Integrated Google Maps API for machine geolocation; built JWT-authenticated portals for real-time kit retrieval."
+        ],
+        "src": "/assets/la.jpeg",
+        "time": "Sept'24 – Present"
+    },
+    {
+        "name": "County of SD",
+        "description": [
+            "Ingested and indexed 5,000+ public health records in PostgreSQL with 20% improved query latency using indexed pipelines.",
+            "Automated inventory sync via Google Sheets API, MySQL/PHP scripts, and CRON jobs for 24/7 real-time field updates."
+        ],
         "src": "/assets/sd.png",
-        "time": "September'24 - Present"
+        "time": "Sept'24 – Present"
     },
     {
         "name": "AfyaChat",
-        "description": "Built GPT-powered microservices and RAG pipelines for an AI eConsultation tool, cutting PCP-specialist delays by 50%.",
+        "description": [
+            "Engineered Flask + GPT-3.5 eConsult system with FastAPI microservices and LlamaIndex RAG pipeline across 7+ years of patient data.",
+            "Integrated Twilio for real-time MD notifications, reducing specialist response time by 50% and patient wait time by 35%."
+        ],
         "src": "/assets/afya.png",
-        "time": "March'24 - April'24"
+        "time": "March'24 – April'24"
     },
-    {
-        "name": "Karya-Productivity",
-        "description": "Co-founded an AI-driven productivity SaaS, built MVP with LLMs + Google Calendar sync, and onboarded 50+ beta users.",
-        "src": "/assets/karya.png",
-        "time": "June'23 - May'23"
-    },
-    {
-        "name": "SD County",
-        "description": "Developed a real-time reporting dashboard for harm reduction programs serving 10k+ citizens.",
-        "src": "/assets/sd.png",
-        "time": "Dec'22 - June'23"
-    },
-    {
-        "name": "UCSD ITS Department",
-        "description": "Built Groovy and batch scripts to automate budget planning in Oracle EPBC for UCSD-wide financial ops.",
-        "src": "/assets/ucsd.png",
-        "time": "Sept'22 - Dec'22"
-    },
-    {
-        "name": "Blacklogics",
-        "description": "Redesigned the landing page, optimized SEO, and secured the site to boost client leads for a landscaping startup.",
-        "src": "/assets/blacklogics.png",
-        "time": "Sept'22 - Dec'22"
-    }
+{
+    "name": "Karya-Productivity",
+    "description": [
+        "Co-founded AI productivity SaaS with Next.js, MongoDB, and GPT-3.5 integration.",
+        "Parsed syllabi into auto-synced strategic calendars; onboarded 50+ student users."
+    ],
+    "src": "/assets/karya.png",
+    "time": "June'23 - May'23"
+},
+{
+    "name": "UCSD ITS Department",
+    "description": [
+        "Wrote Groovy + bash scripts to automate Oracle EPBCS financial workflows.",
+        "Cut monthly budget planning latency by 60% across UCSD-wide operations."
+    ],
+    "src": "/assets/ucsd.png",
+    "time": "Sept'22 - Dec'22"
+},
+{
+    "name": "Blacklogics",
+    "description": [
+        "Revamped landing page using HTML/CSS and JavaScript with SEO optimization.",
+        "Implemented HTTPS/SSL + Cloudflare to boost leads and site reliability by 3x."
+    ],
+    "src": "/assets/blacklogics.png",
+    "time": "Sept'22 - Dec'22"
+}
+
 
 ]

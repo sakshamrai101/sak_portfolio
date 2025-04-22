@@ -3,9 +3,10 @@ import experiences from "../../data/experiences.json";
 import TimelineItem from "./TimelineItem";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Updated to reflect new description format
 interface Experience {
     name: string;
-    description: string;
+    description: string[]; // now an array of bullet points
     src: string;
     time: string;
 }
@@ -50,7 +51,11 @@ const Timeline: React.FC = () => {
                                     <h3 className="font-bold text-lg mb-2 text-center drop-shadow">
                                         {item.time}
                                     </h3>
-                                    <p className="text-sm leading-relaxed">{item.description}</p>
+                                    <ul className="list-disc list-inside text-sm space-y-1">
+                                        {item.description.map((point, i) => (
+                                            <li key={i}>{point}</li>
+                                        ))}
+                                    </ul>
                                 </motion.div>
                             )}
                         </AnimatePresence>
