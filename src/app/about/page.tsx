@@ -29,10 +29,9 @@ export default function About() {
 
             <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-screen overflow-hidden px-4 sm:px-6 py-10 gap-12 sm:gap-16 md:gap-24">
                 {/* Left Section */}
-                <div className="max-w-xl text-left">
+                <div className="max-w-xl justify-start items-start">
                     <p
                         className="text-3xl sm:text-4xl md:text-6xl m-4 sm:m-6 relative w-max text-white"
-                        style={{ fontFamily: '"Borel", cursive' }}
                         onTouchStart={(e) => {
                             e.currentTarget.classList.add("bg-blue-600");
                         }}
@@ -40,13 +39,17 @@ export default function About() {
                             e.currentTarget.classList.remove("bg-blue-600");
                         }}
                     >
-                        <span className="px-1 relative z-10">About Me</span>
-                        <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
+                        <span className="relative inline-block group overflow-hidden justify-center items-center">
+                            <span className="px-1 relative z-10 transition-colors duration-300 group-hover:text-white">
+                                About Me
+                            </span>
+                            <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 z-0 transition-all duration-300 group-hover:h-full"></span>
+                        </span>
+
                         
                     </p>
                     <p
                         className="text-base sm:text-lg md:text-3xl text-white px-2"
-                        style={{ fontFamily: '"Borel", cursive' }}
                     >
                         I am a highly motivated software engineer with an{" "}
                         <span className="px-1 z-10 group-hover:text-white text-amber-300">
@@ -62,7 +65,6 @@ export default function About() {
                     <button
                         onClick={() => setDropDown(!dropDown)}
                         className="text-white bg-blue-600 hover:bg-blue-700 border border-blue-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center"
-                        style={{ fontFamily: '"Borel", cursive' }}
                     >
                         Skills (YOE)
                         <svg
@@ -95,19 +97,19 @@ export default function About() {
                                 <li onClick={() => handleSkillChange("languages")}>
                                     <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <img src={codeImage.src} alt="Code" className="w-6 h-6 mr-2" />
-                                        <span style={{ fontFamily: '"Borel", cursive' }}>Languages</span>
+                                        <span >Languages</span>
                                     </a>
                                 </li>
                                 <li onClick={() => handleSkillChange("frameWorks")}>
                                     <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <img src={database.src} alt="DB" className="w-6 h-6 mr-2" />
-                                        <span style={{ fontFamily: '"Borel", cursive' }}>Technologies</span>
+                                        <span>Technologies</span>
                                     </a>
                                 </li>
                                 <li onClick={() => handleSkillChange("devTools")}>
                                     <a className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <img src={devTools.src} alt="Tools" className="w-6 h-6 mr-2" />
-                                        <span style={{ fontFamily: '"Borel", cursive' }}>Development Tools</span>
+                                        <span>Development Tools</span>
                                     </a>
                                 </li>
                             </motion.ul>

@@ -38,7 +38,6 @@ export const RChart = ({ currentState }: RadarProps) => {
                             fill: "white",
                             fontSize: 14,
                             fontWeight: "bold",
-                            fontFamily: '"Borel", cursive',
                         }}
                     />
                     <PolarRadiusAxis
@@ -46,7 +45,6 @@ export const RChart = ({ currentState }: RadarProps) => {
                         tick={{
                             fill: "white",
                             fontSize: 12,
-                            fontFamily: '"Borel", cursive',
                         }}
                     />
                     <Radar

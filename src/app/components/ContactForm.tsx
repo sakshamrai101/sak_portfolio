@@ -31,7 +31,6 @@ export default function ContactForm() {
         <form
             onSubmit={handleSubmit}
             className="mx-auto w-full max-w-sm sm:max-w-md md:max-w-lg space-y-4 text-white text-sm sm:text-base"
-            style={{ fontFamily: '"Borel", cursive' }}
         >
             <input
                 type="text"

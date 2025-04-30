@@ -32,8 +32,13 @@ export default function Portfolio() {
                             e.currentTarget.classList.remove("bg-blue-600");
                         }}
                     >
-                        <span className="px-1 relative z-10">Portfolio</span>
-                        <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
+                        <span className="relative inline-block group overflow-hidden">
+                            <span className="px-1 relative z-10 transition-colors duration-300 group-hover:text-white">
+                                Portfolio
+                            </span>
+                            <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 z-0 transition-all duration-300 group-hover:h-full"></span>
+                        </span>
+
                     </p>
                 </motion.div>
 

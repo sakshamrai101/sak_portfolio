@@ -46,7 +46,8 @@ const Timeline: React.FC = () => {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                     transition={{ duration: 0.3 }}
-                                    className="absolute top-full mt-4 left-1/2 -translate-x-1/2 w-[90vw] sm:w-72 p-4 rounded-2xl shadow-2xl border border-white/10 bg-gradient-to-br from-blue-500 to-blue-600 backdrop-blur-lg text-white z-10"
+                                    className="absolute top-full mt-1 left-1/2 -translate-x-1/2 w-[90vw] sm:w-72 p-4 rounded-2xl shadow-2xl border border-white/10 bg-gradient-to-br from-blue-500 to-blue-600 backdrop-blur-lg text-white z-10"
+
                                 >
                                     <h3 className="font-bold text-lg mb-2 text-center drop-shadow">
                                         {item.time}

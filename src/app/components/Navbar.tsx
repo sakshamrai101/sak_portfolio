@@ -62,7 +62,6 @@ export const Navbar = () => {
                 `}
                 onMouseEnter={() => !isMobileOpen && setIsExpanded(true)}
                 onMouseLeave={() => !isMobileOpen && setIsExpanded(false)}
-                style={{ fontFamily: '"Borel", cursive' }}
             >
                 <div className="h-full flex flex-col justify-between">
                     {/* Top Logo */}

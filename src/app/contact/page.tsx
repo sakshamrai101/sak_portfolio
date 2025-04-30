@@ -20,7 +20,6 @@ export default function Contact() {
                 >
                     <p
                         className="text-3xl sm:text-4xl md:text-6xl text-white relative w-max"
-                        style={{ fontFamily: '"Borel", cursive' }}
                         onTouchStart={(e) => {
                             e.currentTarget.classList.add("bg-blue-600");
                         }}
@@ -28,15 +27,19 @@ export default function Contact() {
                             e.currentTarget.classList.remove("bg-blue-600");
                         }}
                     >
-                        <span className="px-1 relative z-10">Contact Me</span>
-                        <span className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-blue-600 z-0 group-hover:h-full"></span>
+                        <span className="relative inline-block group overflow-hidden">
+                            <span className="px-1 relative z-10 transition-colors duration-300 group-hover:text-white">
+                                Contact Me
+                            </span>
+                            <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 z-0 transition-all duration-300 group-hover:h-full"></span>
+                        </span>
+
                     </p>
 
                     <a
                         href="10_MOE_RES.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ fontFamily: '"Borel", cursive' }}
                         className="px-5 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300 flex items-center gap-2"
                     >
                         Resume
@@ -56,7 +59,6 @@ export default function Contact() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="text-lg sm:text-2xl md:text-3xl font-semibold text-white text-center"
-                        style={{ fontFamily: '"Borel", cursive' }}
                     >
                         Thank you for your interest in getting in touch!
                     </motion.h2>
