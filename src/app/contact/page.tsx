@@ -43,7 +43,7 @@ export default function Contact() {
                         className="px-5 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300 flex items-center gap-2"
                     >
                         Resume
-                        <img src="assets/10_MOE_RES.png" alt="resume icon" className="w-5 h-5" />
+                        <img src="assets/resume.png" alt="resume icon" className="w-5 h-5" />
                     </a>
                 </motion.div>
 
