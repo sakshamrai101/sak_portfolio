@@ -21,7 +21,7 @@ export const Navbar = () => {
     }, [isMobileOpen]);
 
     const sidebarLinks = [
-        { id: "home", src: house.src, label: "Landing", href: "/landing" },
+        { id: "home", src: house.src, label: "Home", href: "/landing" },
         { id: "about", src: about.src, label: "About Me", href: "/about" },
         { id: "work", src: work.src, label: "Work Ex.", href: "/work" },
         { id: "portfolio", src: portfolio.src, label: "Portfolio", href: "/portfolio" },
