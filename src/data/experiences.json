@@ -2,9 +2,9 @@
     {
         "name": "CreateBase",
         "description": [
-            "Built NLP pipelines for 10M+ royalty records; improved accuracy by 65%.",
-            "Deployed sub-100ms LLM inference to recover $500K+ in missed payouts.",
-            "Integrated Pinecone vector search to cut manual matching by 40%."
+            "Building NLP pipelines for 10M+ royalty records; improving accuracy by 50%.",
+            "Deploying sub-100ms LLM inference to recover $500K+ in missed payouts.",
+            "Integrating Pinecone vector search to cut manual matching by 40%."
         ],
         "src": "/assets/createbase.jpeg",
         "time": "May'25 – Present"
@@ -14,21 +14,21 @@
         "description": [
             "Centralizing backend logic into service layer for CRM integrations.",
             "Building Clay-triggered campaign orchestration via Firebase auth.",
-            "Deploying voice/SMS flows using AWS Lambda, EC2, and Telnyx.",
-            "Fixing routing bugs and normalizing UTC logs with CloudWatch."
+            "Deploying voice/SMS flows using AWS Lambda, EC2, and Telnyx."
         ],
         "src": "/assets/gabriel.png",
         "time": "April'25 – Present"
-    },
-    {
-        "name": "AfyaChat",
-        "description": [
-            "Built GPT-3.5 eConsult system with Flask, FastAPI, and RAG pipeline.",
-            "Integrated Twilio alerts; cut MD response time by 50%."
-        ],
-        "src": "/assets/afya.png",
-        "time": "March'24 – April'24"
-    },
+    },  
+{
+    "name": "AfyaChat",
+    "description": [
+        "Indexed 7+ years of medical records using LlamaIndex and ada-002 embeddings.",
+        "Built RAG pipeline with FastAPI + FAISS for real-time GPT-3.5 consultations.",
+        "Integrated Twilio for instant MD alerts; reduced wait time by 35%."
+    ],
+    "src": "/assets/afya.png",
+    "time": "March'24 – April'24"
+},
     {
         "name": "County of SD",
         "description": [
