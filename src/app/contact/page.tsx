@@ -37,7 +37,7 @@ export default function Contact() {
                     </p>
 
                     <a
-                        href="11_MOE_RES.pdf"
+                        href="assets/1_YOE_RES.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-5 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300 flex items-center gap-2"

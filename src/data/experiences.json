@@ -1,4 +1,14 @@
 [
+{
+    "name": "CreateBase",
+    "description": [
+        "Built NLP pipelines matching 10M+ messy royalty records, improving metadata resolution accuracy by 65%.",
+        "Deployed real-time LLM inference systems using HuggingFace + Supabase, recovering $500K+ in missed payouts.",
+        "Engineered vector search with Pinecone + sentence embeddings to cut manual rights matching by 40%."
+    ],
+    "src": "/assets/createbase.jpeg",
+    "time": "May'25 – Present"
+},
     {
         "name": "Gabriel AI",
         "description": [
