@@ -1,77 +1,76 @@
 [
-{
-    "name": "CreateBase",
-    "description": [
-        "Built NLP pipelines matching 10M+ messy royalty records, improving metadata resolution accuracy by 65%.",
-        "Deployed real-time LLM inference systems using HuggingFace + Supabase, recovering $500K+ in missed payouts.",
-        "Engineered vector search with Pinecone + sentence embeddings to cut manual rights matching by 40%."
-    ],
-    "src": "/assets/createbase.jpeg",
-    "time": "May'25 – Present"
-},
+    {
+        "name": "CreateBase",
+        "description": [
+            "Built NLP pipelines for 10M+ royalty records; improved accuracy by 65%.",
+            "Deployed sub-100ms LLM inference to recover $500K+ in missed payouts.",
+            "Integrated Pinecone vector search to cut manual matching by 40%."
+        ],
+        "src": "/assets/createbase.jpeg",
+        "time": "May'25 – Present"
+    },
     {
         "name": "Gabriel AI",
         "description": [
-            "Integrated Firebase Auth, Telnyx APIs, and AWS Lambda/EC2 to handle secure user sessions, SMS/call flows, and infra billing access.",
-            "Resolved routing bugs, implemented UTC timestamp normalization, and enabled CloudWatch logging for $400+/mo backend visibility."
+            "Centralizing backend logic into service layer for CRM integrations.",
+            "Building Clay-triggered campaign orchestration via Firebase auth.",
+            "Deploying voice/SMS flows using AWS Lambda, EC2, and Telnyx.",
+            "Fixing routing bugs and normalizing UTC logs with CloudWatch."
         ],
         "src": "/assets/gabriel.png",
         "time": "April'25 – Present"
     },
     {
-        "name": "County of LA",
+        "name": "AfyaChat",
         "description": [
-            "Deployed 21 smart vending machines with secure Node.js + PostgreSQL backend serving 13,000+ citizens Naloxone kits.",
-            "Integrated Google Maps API for machine geolocation; built JWT-authenticated portals for real-time kit retrieval."
+            "Built GPT-3.5 eConsult system with Flask, FastAPI, and RAG pipeline.",
+            "Integrated Twilio alerts; cut MD response time by 50%."
         ],
-        "src": "/assets/la.jpeg",
-        "time": "Sept'24 – Present"
+        "src": "/assets/afya.png",
+        "time": "March'24 – April'24"
     },
     {
         "name": "County of SD",
         "description": [
-            "Ingested and indexed 5,000+ public health records in PostgreSQL with 20% improved query latency using indexed pipelines.",
-            "Automated inventory sync via Google Sheets API, MySQL/PHP scripts, and CRON jobs for 24/7 real-time field updates."
+            "Indexed 5,000+ health records with 20% faster PostgreSQL queries.",
+            "Automated 24/7 inventory sync via Sheets API, PHP, and CRON jobs."
         ],
         "src": "/assets/sd.png",
         "time": "Sept'24 – Present"
     },
     {
-        "name": "AfyaChat",
+        "name": "County of LA",
         "description": [
-            "Engineered Flask + GPT-3.5 eConsult system with FastAPI microservices and LlamaIndex RAG pipeline across 7+ years of patient data.",
-            "Integrated Twilio for real-time MD notifications, reducing specialist response time by 50% and patient wait time by 35%."
+            "Shipped Node.js + PostgreSQL backend for 21 Naloxone vending machines.",
+            "Enabled live kit retrieval with Google Maps and JWT-secured portals."
         ],
-        "src": "/assets/afya.png",
-        "time": "March'24 – April'24"
+        "src": "/assets/la.jpeg",
+        "time": "Sept'24 – Present"
     },
-{
-    "name": "Karya-Productivity",
-    "description": [
-        "Co-founded AI productivity SaaS with Next.js, MongoDB, and GPT-3.5 integration.",
-        "Parsed syllabi into auto-synced strategic calendars; onboarded 50+ student users."
-    ],
-    "src": "/assets/karya.png",
-    "time": "June'23 - May'23"
-},
-{
-    "name": "UCSD ITS Department",
-    "description": [
-        "Wrote Groovy + bash scripts to automate Oracle EPBCS financial workflows.",
-        "Cut monthly budget planning latency by 60% across UCSD-wide operations."
-    ],
-    "src": "/assets/ucsd.png",
-    "time": "Sept'22 - Dec'22"
-},
-{
-    "name": "Blacklogics",
-    "description": [
-        "Revamped landing page using HTML/CSS and JavaScript with SEO optimization.",
-        "Implemented HTTPS/SSL + Cloudflare to boost leads and site reliability by 3x."
-    ],
-    "src": "/assets/blacklogics.png",
-    "time": "Sept'22 - Dec'22"
-}
 
-
+    {
+        "name": "Karya-Productivity",
+        "description": [
+            "Co-founded AI productivity tool with GPT-3.5 + Mongo + Next.js.",
+            "Auto-parsed syllabi into synced calendars; onboarded 50+ users."
+        ],
+        "src": "/assets/karya.png",
+        "time": "June'23 - May'23"
+    },
+    {
+        "name": "UCSD ITS Department",
+        "description": [
+            "Automated Oracle workflows with Groovy/bash; cut latency by 60%."
+        ],
+        "src": "/assets/ucsd.png",
+        "time": "Sept'22 - Dec'22"
+    },
+    {
+        "name": "Blacklogics",
+        "description": [
+            "Rebuilt SEO-optimized landing page; boosted leads 3x with HTTPS + CDN."
+        ],
+        "src": "/assets/blacklogics.png",
+        "time": "Sept'22 - Dec'22"
+    }
 ]
