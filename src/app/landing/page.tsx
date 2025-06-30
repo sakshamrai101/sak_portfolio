@@ -27,8 +27,8 @@ export default function LandingPage() {
                         </div>
 
                         <p className="text-base sm:text-lg md:text-xl font-bold text-white animate-pulse">
-                            Enginnering @CreateBase, GABRIEL AI
-                            CS UCSD'24
+                            Engineering @CreateBase, GABRIEL AI
+                            CS UCSD&apos;24
                         </p>
                         <Link href="/contact">
                             <button className="mt-3 px-3 py-2 sm:px-8 sm:py-2 md:px-5 md:py-3 text-sm sm:text-base bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300">
