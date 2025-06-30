@@ -27,7 +27,7 @@ export default function LandingPage() {
                         </div>
 
                         <p className="text-base sm:text-lg md:text-xl font-bold text-white animate-pulse">
-                            Enginnering @CreateBase, Gabriel AI
+                            Enginnering @CreateBase, GABRIEL AI
                             CS UCSD'24
                         </p>
                         <Link href="/contact">
