@@ -28,6 +28,8 @@ export default function LandingPage() {
 
                         <p className="text-base sm:text-lg md:text-xl font-bold text-white animate-pulse">
                             Engineering @CreateBase, GABRIEL AI
+                        </p>
+                        <p className="text-base sm:text-lg md:text-xl font-bold text-white animate-pulse">
                             CS UCSD&apos;24
                         </p>
                         <Link href="/contact">
