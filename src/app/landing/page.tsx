@@ -16,10 +16,10 @@ export default function LandingPage() {
                 {/* Left Side */}
                 <div
                     className="flex flex-col justify-center items-center text-white w-full md:w-1/2"
-                    style={{ fontFamily: `"Borel", "cursive"` }}
                 >
                     <div className="text-white w-full space-y-4 sm:space-y-6 md:space-y-10">
-                        <div className="text-3xl sm:text-2xl md:text-5xl font-bold">
+                        <div className="text-3xl sm:text-2xl md:text-5xl font-bold"
+                             style={{ fontFamily: `"Borel", "cursive"` }}>
                             <TypewriterText
                                 lines={["Hi, I am Saksham", "Software Engineer"]}
                                 speed={75}
