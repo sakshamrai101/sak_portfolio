@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function LandingPage() {
     return (
-        <div className="min-h-screen bg-black flex justify-center">
+        <div className="min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 flex justify-center">
             <Navbar />
 
             <div className="flex flex-col md:flex-row items-center justify-center px-6 sm:px-8 md:px-20 py-10 gap-20 md:gap-40">
