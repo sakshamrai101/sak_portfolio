@@ -4,7 +4,7 @@ import { Navbar } from "../components/Navbar";
 import "../global.css";
 import React from "react";
 import mainLogo from "../../../public/assets/mainLogo.png";
-import TypewriterText from "../components/TypewriterText";
+import HeroHeadline from "../components/HeroHeadline";
 import Link from "next/link";
 
 export default function LandingPage() {
@@ -18,13 +18,7 @@ export default function LandingPage() {
                     className="flex flex-col justify-center items-center text-white w-full md:w-1/2"
                 >
                     <div className="text-white w-full space-y-4 sm:space-y-6 md:space-y-10">
-                        <div className="text-3xl sm:text-2xl md:text-5xl font-bold"
-                             style={{ fontFamily: `"Borel", "cursive"` }}>
-                            <TypewriterText
-                                lines={["Hi, I am Saksham", "Software Engineer"]}
-                                speed={75}
-                            />
-                        </div>
+                        <HeroHeadline />
                         <Link href="/contact">
                             <button className="mt-3 px-3 py-2 sm:px-8 sm:py-2 md:px-5 md:py-3 text-sm sm:text-base bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition-all duration-300">
                                 Contact Me

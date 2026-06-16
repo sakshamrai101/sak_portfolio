@@ -60,7 +60,7 @@ export default function Contact() {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="text-lg sm:text-2xl md:text-3xl font-semibold text-white text-center"
                     >
-                        Thank you for your interest in getting in touch!
+                        Have a project in mind? Drop a line.
                     </motion.h2>
                     <ContactForm />
                 </motion.div>
